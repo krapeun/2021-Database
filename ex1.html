@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+    </head>
+        <meta charset = "utf 8">
+        <title>HTML 연습</title>
+    <body>
+        <header>
+            <div>
+                <img src="../image/ex.png" alt="myphoto" id="fig">
+            </div>
+            <hi>ParkJieun</hi>
+            <p>Database</p>
+        </header>
+        <nav>
+            <a href="#s1">[개인정보]</a>&nbsp;&nbsp;
+            <a href="#s1">[이수과목]</a>&nbsp;&nbsp;
+            <a href="#s1">[수강과목]</a>&nbsp;&nbsp;
+            <a href="#s1">[자기소개]</a>&nbsp;&nbsp;
+        </nav>
+        <section id="s1">
+            <h2>개인정보</h2>
+            <ul>
+                <li>Park Jieun</li>
+                <li>010-5144-9251</li>
+                <li>qkrwldms1127@gmail.com</li>
+                <li>인천시 미추홀구</li>
+            </ul>
+        </section>
+        <section class="sc1" id="sc2">
+            <h2 class="c1">이수과목</h2>
+            <ol>
+                <li>선형대수</li>
+                <li>자료구조론</li>
+                <li>프로그래밍실습</li>
+                <li>알고리즘설계</li>
+            </ol>
+        </section>
+    <section class="sc2" id="s3">
+        <h2 class="c2">수강과목</h2>
+        <ul>
+            <li>데이터베이스설계</li>
+        </ul>
+    </section>
+    <section class="sc3" id="s4">
+        <h2 class="c3">자기소개</h2>
+        <p id="p1">
+            *** 안녕하세요. 정보통신공학과 12171788 박지은입니다. ***
+            <br>
+        </p>
+    </section>
+    <footer>
+        &copy; ParkJieun, qkrwldms1127@gmail.com
+    </footer>
+    </body>
+</html>
+
+<style>
+    body{
+        margin:0px;
+        padding:0px;
+    }
+    header{
+        width: 100%;
+        background-color: #005766;
+        height: 200px;
+    }
+    header > div{
+        float: left;
+    }
+    header h1, header p{
+        color:white;
+        text-align: center;
+        margin:30px;
+    }
+    header img{
+        height:150px;
+        padding:20px;
+    }
+    nav{
+        clear: both;
+        background-color:#3db7cc;
+        height: 40px;
+    }
+    nav a{
+        width:100px;
+        height:40px;
+        padding:5px;
+        display:inline-block;
+        text-decoration:none;
+        text-align:center
+    }
+</style>

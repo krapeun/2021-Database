@@ -1,0 +1,40 @@
+<h1>{{ title }}</h1>
+<table>
+  <tr>
+    <td>User_id</td>
+    <td>Flight_number</td>
+    <td>Leg_number</td>
+    <td>Date</td>
+    <td>Seat_number</td>
+    <td>Airplane_id</td>
+    <td>DName</td>
+    <td>AName</td>
+    <td>Departure_time</td>
+    <td>Arrival_time</td>
+  </tr>
+  {{#each My_List}}
+  <form method="post">
+    <tr>
+      <td>{{User_id}}</td>
+      <td>{{Flight_number}}</td>
+      <td>{{Leg_number}}</td>
+      <td>{{Date}}</td>
+      <td>{{Seat_number}}</td>
+      <td>{{Airplane_id}}</td>
+      <td>{{DName}}</td>
+      <td>{{AName}}</td>
+      <td>{{Departure_time}}</td>
+      <td>{{Arrival_time}}</td>
+      <td style="border: none; margin-left: 10px;">
+        <button style="margin-left: 10px;"
+        name='delBtn'
+        type="submit"
+        value="{{Flight_number}}">
+        예약 취소
+        </button>
+      </td>
+    </tr>
+  </form>
+  {{/each}}
+</table>
+

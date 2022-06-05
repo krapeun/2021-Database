@@ -1,0 +1,96 @@
+<h1>{{ title1 }}</h1>
+
+<table>
+  <tr>
+    <td>Flight_number</td>
+    <td>Airline</td>
+    <td>Weekdays</td>
+    <td>Captain</td>
+  </tr>
+  {{#each Flight}}
+  <form method="post">
+    <tr>
+      <td>{{Flight_number}}</td>
+      <td>{{Airline}}</td>
+      <td>{{Weekdays}}</td>
+      <td>{{Captain}}</td>
+
+      <td style="border: none; margin-left: 10px;">
+        <button style="margin-left: 10px;"
+        name='deletebtn'
+        type="submit"
+        value="{{Flight_number}}"
+        formaction="/flight">
+        삭제
+        </button>
+      </td>
+
+    </tr>
+  </form>
+  {{/each}}
+</table>
+
+<br>
+
+<h1>{{ title2 }}</h1>
+
+<form name="Flight" method="post" action='/flight'>
+  <div>
+    <label for="Flight_number">Flight_number</label>
+    <input id="Flight_number" name="Flight_number" type="text" required placeholder="Flight_number">
+  </div>
+  <div>
+    <label for="Airline">Airline</label>
+    <input id="Airline" name="Airline" type="text" required placeholder="Airline">
+  </div>
+  <div>
+    <label for="Weekdays">Weekdays</label>
+    <input id="Weekdays" name="Weekdays" type="text" required placeholder="Weekdays">
+  </div>
+  <div>
+    <label for="Captain">Captain</label>
+    <input id="Captain" name="Captain" type="text" required placeholder="Captain">
+  </div>
+  <div>
+    <td style="border: none; margin-left: 10px;">
+      <button type="submit"
+      name='insertbtn'
+      values="flight"
+      formaction="/flight">
+      삽입
+      </button>
+    </td>
+  </div>
+</form>
+
+<br><br>
+
+<h1>{{title3}}</h1>
+
+<table>
+  <tr>
+    <td>Flight_number</td>
+    <td>Airline</td>
+    <td>Weekdays</td>
+    <td>Captain</td>
+  </tr>
+  {{#each Flight}}
+  <form method="post">
+    <tr>
+      <td>{{Flight_number}}</td>
+      <td>{{Airline}}</td>
+      <td>{{Weekdays}}</td>
+      <td><input type="text" name="Captain" placeholder={{Captain}}></td>
+      <td style="border: none; margin-left: 10px;">
+        <button style="margin-left: 10px;"
+        name='updatebtn'
+        type="submit"
+        value="{{Flight_number}}"
+        formaction="/flight">
+        수정
+        </button>
+      </td>
+    </tr>
+  </form>
+  {{/each}}
+</table>

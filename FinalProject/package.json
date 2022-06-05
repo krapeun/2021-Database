@@ -1,0 +1,24 @@
+{
+  "name": "FinalProject",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon -L --exec babel-node ./src/index.js"
+  },
+  "author": "jepark",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/node": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "nodemon": "^2.0.13"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "description": ""
+}

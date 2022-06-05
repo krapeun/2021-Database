@@ -1,0 +1,105 @@
+<h1>{{ title1 }}</h1>
+
+<table>
+  <tr>
+    <td>Airport_code</td>
+    <td>Name</td>
+    <td>City</td>
+    <td>State</td>
+    <td>Manager</td>
+  </tr>
+  {{#each Airport}}
+  <form method="post">
+    <tr>
+      <td>{{Airport_code}}</td>
+      <td>{{Name}}</td>
+      <td>{{City}}</td>
+      <td>{{State}}</td>
+      <td>{{Manager}}</td>
+
+      <td style="border: none; margin-left: 10px;">
+        <button 
+        style="margin-left: 10px;"
+        name='deletebtn'
+        type="submit"
+        value="{{Airport_code}}"
+        formaction="/airport">
+        삭제
+        </button>
+      </td>
+
+    </tr>
+  </form>
+  {{/each}}
+</table>
+
+<br>
+
+<h1>{{ title2 }}</h1>
+
+<form name="Airport" method="post" action='/airport'>
+  <div>
+    <label for="Airport_code">Airport_code</label>
+    <input id="Airport_code" name="Airport_code" type="text" required placeholder="Airport_code">
+  </div>
+  <div>
+    <label for="Name">Name</label>
+    <input id="Name" name="Name" type="text" required placeholder="Name">
+  </div>
+  <div>
+    <label for="City">City</label>
+    <input id="City" name="City" type="text" required placeholder="City">
+  </div>
+  <div>
+    <label for="State">State</label>
+    <input id="State" name="State" type="text" required placeholder="State">
+  </div>
+  <div>
+    <label for="Manager">Manager</label>
+    <input id="Manager" name="Manager" type="text" placeholder="Manager">
+  </div>
+  <div>
+    <td style="border: none; margin-left: 10px;">
+      <button type="submit"
+      name='insertbtn'
+      values="airport"
+      formaction="/airport">
+      삽입
+      </button>
+    </td>
+  </div>
+</form>
+
+<br><br>
+
+<h1>{{title3}}</h1>
+
+<table>
+  <tr>
+    <td>Airport_code</td>
+    <td>Name</td>
+    <td>City</td>
+    <td>State</td>
+    <td>Manager</td>
+  </tr>
+  {{#each Airport}}
+  <form method="post">
+    <tr>
+      <td>{{Airport_code}}</td>
+      <td>{{Name}}</td>
+      <td>{{City}}</td>
+      <td>{{State}}</td>
+      <td><input type="text" name="Manager" placeholder={{Manager}}></td>
+      <td style="border: none; margin-left: 10px;">
+        <button type="submit"
+        name='updatebtn'
+        value="{{Airport_code}}"
+        formaction="/airport">
+        수정
+        </button>
+      </td>
+    </tr>
+  </form>
+  {{/each}}
+</table>
+
